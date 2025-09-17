@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Devika's Student Blog</title>
+<style>
+  /* Dropdown styling */
+  nav a { margin: 0 8px; color: #D9B991; text-decoration: none; font-size: 14px; }
+  .dropdown { position: relative; display: inline-block; }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #260101;
+    min-width: 150px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    border-radius: 6px;
+    z-index: 1001;
+  }
+  .dropdown-content a {
+    color: #D9B991;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+  }
+  .dropdown-content a:hover { background-color: #402814; }
+  .dropdown:hover .dropdown-content { display: block; }
+
+  /* Blog post cards uniform height */
+  .blog-card { display: flex; flex-direction: column; height: 350px; overflow: hidden; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.6); background:#402814; }
+  .blog-card img { width:100%; height:180px; object-fit:cover; }
+  .blog-card div { padding:15px; color:#D9B991; flex:1; display:flex; flex-direction:column; justify-content:space-between; }
+</style>
+</head>
+<body style="margin:0; font-family:'Playfair Display', serif; background-color:#0D0C00; color:#D9B991; scroll-behavior: smooth; scroll-padding-top:120px;">
+
+  <!-- Navbar -->
+  <header style="display:flex; justify-content:space-between; align-items:center; width:100%; padding:15px 20px; position:fixed; top:0; z-index:1000; background:rgba(13,12,0,0.95);">
+    <div style="font-weight:bold; font-size:18px;">My Blog</div>
+    <nav style="display:flex; justify-content:center; align-items:center; flex:1; gap:20px;">
+      <a href="#about">About Me</a>
+      <a href="#blog-posts">Blogs</a> <!-- Blogs instead of Works -->
+
+      <!-- Categories Dropdown -->
+      <div class="dropdown">
+        <a href="#">Categories &#9662;</a>
+        <div class="dropdown-content">
+          <a href="web-design.html">Web Design</a>
+          <a href="ml.html">Machine Learning</a>
+          <a href="photography.html">Photography</a>
+        </div>
+      </div>
+
+      <a href="#social">Connect</a>
+    </nav>
+  </header>
+
+
+
+
+
+  <!-- Hero -->
+  <section style="background:url('pic11.jpg') center 30% / cover no-repeat #0D0C00; width:100vw; height:100vh; display:flex; align-items:flex-start; justify-content:flex-start; text-align:left; padding:180px 50px 0 50px; box-sizing:border-box;">
+    <img src="C:\Users\hi\Desktop\blog\hi1.JPG" alt="My Photo" style="width:260px; height:260px; border-radius:50%; object-fit:cover; box-shadow:0 4px 15px rgba(0,0,0,0.7); border:5px solid #fff; margin-top:20px;">
+    <div style="flex:1; color:#fff; padding-left:40px;">
+      <h1 style="font-size:48px; margin:10px 0;">Hi, I'm Devika</h1>
+      <p style="font-size:18px; margin:0; letter-spacing:1px;">Student • Blogger • Designer</p>
+    </div>
+  </section>
+
+  <!-- About + Sidebar -->
+  <section id="about" style="display:flex; justify-content:space-between; align-items:flex-start; padding:80px 40px; background:#260101; gap:30px;">
+    <div style="flex:3; background:#402814; padding:20px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.5);">
+      <h2 style="font-size:32px; margin-bottom:20px; color:#D9B991;">About Me</h2>
+      <p style="font-size:18px; line-height:1.6;">
+        I’m a student passionate about design, technology, and writing.
+        This is my personal blog where I showcase my works, share thoughts,
+        and explore creative ideas.
+      </p>
+    </div>
+    <aside style="flex:1; background:#0D0C00; padding:20px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.5);">
+      <h3 style="margin-top:0; font-size:22px; color:#D9B991;">Categories</h3>
+      <ul style="list-style:none; padding:0;">
+        <li><a href="web-design.html">Web Design</a></li>
+        <li><a href="ml.html">Machine Learning</a></li>
+        <li><a href="photography.html">Photography</a></li>
+      </ul>
+      <h3 style="margin-top:20px; font-size:22px; color:#D9B991;">Recent Posts</h3>
+      <ul style="list-style:none; padding:0;">
+        <li><a href="ml.html">Getting Started with ML</a></li>
+        <li><a href="web-design.html">Designing with Figma</a></li>
+        <li><a href="photography.html">My Travel Photography</a></li>
+      </ul>
+    </aside>
+  </section>
+
+  <!-- Featured Blog Section -->
+  <section id="featured" style="width:100%; padding:40px 20px; background:#000000;">
+    <h2 style="text-align:center; margin-bottom:30px; font-size:32px; color:#D9B991;">Featured Blog</h2>
+    <div style="display:flex; gap:20px; flex-wrap:wrap; justify-content:center;">
+      <a href="featured.html" style="text-decoration:none; color:inherit;">
+        <div style="background:#260101; border-radius:12px; overflow:hidden; width:300px; box-shadow:0 4px 10px rgba(0,0,0,0.6);">
+          <img src="C:\Users\hi\Desktop\blog\website.jpg" alt="Featured 1" style="width:100%; height:180px; object-fit:cover;">
+          <div style="padding:15px; color:#D9B991;">
+            <h3>How I Built My First Website</h3>
+            <p>A step-by-step guide to my first web design project.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Blog Posts Section -->
+  <section id="blog-posts" style="width:100%; padding:80px 20px; background:#260101;">
+    <h2 style="text-align:center; margin-bottom:40px; font-size:32px; color:#D9B991;">Blog Posts</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(250px,1fr)); gap:20px;">
+
+      <!-- Blog 1 -->
+      <a href="blog1.html" style="text-decoration:none; color:#D9B991;">
+        <div class="blog-card">
+          <img src="C:\Users\hi\Desktop\blog\html.jpg" alt="Blog 1">
+          <div>
+            <h3>Getting Started with HTML & CSS</h3>
+            <p>Basic concepts and beginner-friendly tips for web development.</p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Blog 2 -->
+      <a href="blog2.html" style="text-decoration:none; color:#D9B991;">
+        <div class="blog-card">
+          <img src="C:\Users\hi\Desktop\blog\uiux.jpg" alt="Blog 2">
+          <div>
+            <h3>UI/UX Design Basics</h3>
+            <p>Understanding user interface and user experience principles.</p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Blog 3 -->
+      <a href="blog3.html" style="text-decoration:none; color:#D9B991;">
+        <div class="blog-card">
+          <img src="C:\Users\hi\Desktop\blog\design.jpg" alt="Blog 3">
+          <div>
+            <h3>Responsive Design Tips</h3>
+            <p>How to make websites mobile-friendly and accessible.</p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Blog 4 (New) -->
+      <a href="blog4.html" style="text-decoration:none; color:#D9B991;">
+        <div class="blog-card">
+          <img src="C:\Users\hi\Desktop\blog\javascript.jpg" alt="Blog 4">
+          <div>
+            <h3>JavaScript for Beginners</h3>
+            <p>Learn the fundamentals of JavaScript and interactive web development.</p>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" style="width:100%; padding:80px 20px; background:#402814; text-align:center;">
+    <h2 style="font-size:32px; margin-bottom:40px; color:#D9B991;">Contact Me</h2>
+    <p>Feel free to reach out via email: <a href="mailto:devikaravip7@gmail.com" style="color:#D9B991; text-decoration:underline;">devikaravip7@gmail.com</a></p>
+  </section>
+
+  <!-- Social -->
+  <section id="social" style="background:#260101; text-align:center; padding:50px 20px;">
+    <h2 style="font-size:28px; margin-bottom:20px;">Connect With Me</h2>
+    <div>
+      <a href="https://www.linkedin.com/in/devika-ravi-486335322/" target="_blank"><img src="C:\Users\hi\Desktop\blog\linkedin.jpg" alt="LinkedIn" style="width:50px; height:50px; margin:0 15px; border-radius:8px;"></a>
+      <a href="https://www.instagram.com/_devika.ravi?igsh=eHplcW11a215aDR6" target="_blank"><img src="C:\Users\hi\Desktop\blog\instagram.jpg" alt="Instagram" style="width:50px; height:50px; margin:0 15px; border-radius:8px;"></a>
+      <a href="https://github.com/" target="_blank"><img src="C:\Users\hi\Desktop\blog\github.jpg" alt="GitHub" style="width:50px; height:50px; margin:0 15px; border-radius:8px;"></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background:#0D0C00; text-align:center; padding:20px; color:#D9B991;">
+    © 2025 Devika's Student Blog | All Rights Reserved
+  </footer>
+
+</body>
+</html>
